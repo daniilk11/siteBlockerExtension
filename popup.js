@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateBlockedList(blockedSites);
     });
 
-    console.log('Вы кликнули на иконку расширения!');
 
     blockButton.addEventListener('click', function() {
         const site = siteInput.value.trim();
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         }
-        console.log('Вы кликнули на иконку расширения!');
     });
 
     function updateBlockedList(blockedSites) {
