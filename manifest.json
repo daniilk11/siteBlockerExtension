@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "BlockSiteExtension",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "storage",
+    "declarativeNetRequest",
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "blockSites",
+        "enabled": true,
+        "path": "/rules.json"
+      }
+    ]
+  }
+}
