@@ -25,8 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // html update
     function updateBlockedList(blockedSites) {
-        // Обновление списка заблокированных сайтов на странице
+
         blockedSitesList.innerHTML = '';
         blockedSites.forEach(function(site) {
             const listItem = document.createElement('li');

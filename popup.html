@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BlockSiteExtension Options</title>
+    <title>JS Challenge</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            width: 33em;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: darkcyan;
+        }
+
+        #timer {
+            font-size: 36px;
+        }
+
+        #controls {
+            margin-top: 20px;
+        }
+
+        #blocker {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>BlockSiteExtension Options</h1>
-    <label for="siteInput">Enter site to block:</label>
-    <input type="text" id="siteInput" placeholder="Enter site to block">
-    <button id="blockButton">Block Site</button>
-    <ul id="blockedSitesList"></ul>
-    <script src="popup.js"></script>
+<div>
+    <h1>Do you JS challenge</h1>
+    <div id="timer">Timer: 00:00:00</div>
+    <div id="controls">
+        <input id="setTimer" placeholder="Set time (hours)" type="number">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+        <button id="set">Set Timer</button>
+        <script src="timer.js"></script>
+    </div>
+    <div id="blocker">
+        <label for="siteInput">Enter site to block:</label>
+        <input id="siteInput" placeholder="Enter site to block" type="text">
+        <button id="blockButton">Block Site</button>
+        <!--  TODO  delete  this -->
+        <ul id="blockedSitesList"></ul>
+        <!--    delete  this -->
+        <script src="siteBlocker.js"></script>
+    </div>
+</div>
 </body>
 </html>
