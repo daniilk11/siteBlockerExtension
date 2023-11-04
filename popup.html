@@ -8,11 +8,11 @@
             flex-direction: column;
             align-items: center;
             height: auto;
-            width: 33em;
+            width: 40em;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Helvetica, sans-serif;
             text-align: center;
-            background-color: darkcyan;
+            background-image: linear-gradient(103.3deg, rgba(252, 225, 208, 1) 30%, rgba(255, 173, 214, 1) 55.7%, rgba(162, 186, 245, 1) 81.8%);
         }
 
         #timer {
@@ -20,12 +20,73 @@
         }
 
         #controls {
-            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        #blocker {
-            margin-top: 20px;
+        #blockerControls {
+            margin-top: 7PX;
+            margin-left: 8px;
+            display: flex;
+            flex-direction: row;
+            /*justify-content: center;*/
+            /*align-items: center;*/
         }
+
+        #timerControls {
+            display: flex;
+            flex-direction: row;
+            margin: 7px;
+        }
+
+        input {
+            margin: 3px;
+            padding: 15px;
+            background: #f5f5fa;
+            border: 0;
+            box-shadow: rgba(252, 225, 208, 1);
+            box-sizing: border-box;
+            color: #2a1f62;
+        }
+
+        button {
+            margin: 3px;
+            align-items: center;
+            background: #f5f5fa;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: rgba(252, 225, 208, 1);
+            box-sizing: border-box;
+            color: #2a1f62;
+            cursor: pointer;
+            display: flex;
+            font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+            justify-content: center;
+            line-height: 1.5rem;
+            padding: 11px;
+            position: relative;
+            text-align: left;
+            transition: .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: pre;
+            width: max-content;
+            word-break: normal;
+            word-spacing: normal;
+        }
+
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #set {
+            width: 400px;
+        }
+
     </style>
 </head>
 <body>
@@ -33,17 +94,23 @@
     <h1>Do you JS challenge</h1>
     <div id="timer">Timer: 00:00:00</div>
     <div id="controls">
-        <input id="setTimer" placeholder="Set time (hours)" type="number">
-        <button id="start">Start</button>
-        <button id="pause">Pause</button>
-        <button id="reset">Reset</button>
-        <button id="set">Set Timer</button>
+        <div id="timerControls">
+            <input id="setTimer" placeholder="Set time (hours)" type="number">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div id="setter">
+            <button id="set">Set Timer</button>
+        </div>
         <script src="timer.js"></script>
     </div>
     <div id="blocker">
-        <label for="siteInput">Enter site to block:</label>
-        <input id="siteInput" placeholder="Enter site to block" type="text">
-        <button id="blockButton">Block Site</button>
+        <div id="blockerControls">
+            <input id="siteInput" placeholder="Enter site to block" type="text">
+            <button id="blockButton">Block</button>
+            <button id="unblockButton">Unblock</button>
+        </div>
         <!--  TODO  delete  this -->
         <ul id="blockedSitesList"></ul>
         <!--    delete  this -->
